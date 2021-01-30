@@ -1,5 +1,7 @@
 package com.sgg;
 
+import java.util.ArrayList;
+
 /**
  *
  */
@@ -9,5 +11,10 @@ public class Test1 {
         String str = "Java java hello world";
         String newStr = str.replaceAll("Java", "尚硅谷~");
         System.out.println("newStr= "+ newStr);
+
+        //ArrayList扩容
+//       维护数组 transient Object[] elementData;
+        ArrayList arrayList = new ArrayList();
+
     }
 }

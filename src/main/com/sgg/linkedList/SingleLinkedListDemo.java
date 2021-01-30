@@ -1,5 +1,7 @@
 package com.sgg.linkedList;
 
+import java.util.Stack;
+
 public class SingleLinkedListDemo {
     public static void main(String[] args) {
         //先创建节点
@@ -36,13 +38,16 @@ public class SingleLinkedListDemo {
         SingleLinkedList reverse = list.reverse(list);
         reverse.showLinkedList();
 
+        System.out.println("使用栈结构逆序打印单链表");
+        reverse.reversePrint(reverse.head);
+
     }
 }
 
 //定义SingleLinkedList 管理英雄
 class SingleLinkedList{
     //先初始化一个头节点  不存放具体数据
-    private HeroNode head = new HeroNode(0,"","");
+    public HeroNode head = new HeroNode(0,"","");
     //添加节点到单向链表
     //当不考虑编号顺序时，（尾插法）
     //1.找到当前链表最后节点
@@ -222,6 +227,25 @@ class SingleLinkedList{
 
         }
         return reverseList;
+    }
+
+    //利用栈实现逆序打印
+    public void reversePrint(HeroNode head){
+        if(head.next==null){
+            System.out.println("链表为空");
+            return;
+        }
+        //创建一个栈，将各个节点压入栈
+        Stack<HeroNode> stack = new Stack<>();
+        HeroNode cur = head.next;
+        while (cur!=null){
+            stack.add(cur);
+            cur=cur.next;
+        }
+        while(stack.size()>0) {
+            System.out.println(stack.pop());
+        }
+
     }
 }
 //定义HeroNode，每个HeroNode对象就是一个节点
