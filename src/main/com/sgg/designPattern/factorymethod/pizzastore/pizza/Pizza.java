@@ -1,5 +1,7 @@
 package com.sgg.designPattern.factorymethod.pizzastore.pizza;
 
+import java.util.Calendar;
+
 /**
  * 将pizza类做成抽象类
  */
@@ -20,5 +22,46 @@ public abstract class Pizza {
     public void setName(String name){
         this.name = name;
     }
+    Calendar calendar = new Calendar() {
+        @Override
+        protected void computeTime() {
+
+        }
+
+        @Override
+        protected void computeFields() {
+
+        }
+
+        @Override
+        public void add(int field, int amount) {
+
+        }
+
+        @Override
+        public void roll(int field, boolean up) {
+
+        }
+
+        @Override
+        public int getMinimum(int field) {
+            return 0;
+        }
+
+        @Override
+        public int getMaximum(int field) {
+            return 0;
+        }
+
+        @Override
+        public int getGreatestMinimum(int field) {
+            return 0;
+        }
+
+        @Override
+        public int getLeastMaximum(int field) {
+            return 0;
+        }
+    };
 
 }

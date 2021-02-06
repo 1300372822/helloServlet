@@ -1,6 +1,6 @@
-package com.sgg.designPattern.factorymethod.pizzastore.pizza;
+package com.sgg.designPattern.absfactory.pizzastore.pizza;
 
-public class BJCheesePizza extends Pizza{
+public class BJCheesePizza extends Pizza {
     @Override
     public void prepare() {
         setName("北京的奶酪pizza");
