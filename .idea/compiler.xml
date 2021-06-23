@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HelloServlet" />
+        <module name="JVM" />
         <module name="JDKSRC" />
+        <module name="springlearn" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springLearn" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
