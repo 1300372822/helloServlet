@@ -7,6 +7,7 @@ public class TreeTest {
 
         DfsTree dfsTree = new DfsTree();
         TreeNode node = dfsTree.reConstructBinaryTree(att1, att2);
+
         System.out.println("5444");
     }
 }
