@@ -2,17 +2,30 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JVM" />
-        <module name="JDKSRC" />
         <module name="springlearn" />
+        <module name="rabbitmq-consumer-spring-advanced" />
+        <module name="consumer-springboot" />
+        <module name="springbootlearn" />
+        <module name="producer-springboot" />
+        <module name="rabbitmq-producer-spring-advanced" />
+        <module name="rabbitmq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springLearn" target="1.7" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="consumer-springboot" options="-parameters" />
+      <module name="producer-springboot" options="-parameters" />
+      <module name="springbootlearn" options="-parameters" />
+    </option>
   </component>
 </project>

@@ -9,8 +9,8 @@ public class CountDownLatchDemo {
 
     public static void main(String[] args) {
 
-        CountDownLatch countDownLatch = new CountDownLatch(8);
-        for (int i = 0; i <8 ; i++) {
+        CountDownLatch countDownLatch = new CountDownLatch(6);
+        for (int i = 1; i <7 ; i++) {
             new Thread(()->{
                 System.out.println(Thread.currentThread().getName()+"\t 国，被灭");
                 countDownLatch.countDown();

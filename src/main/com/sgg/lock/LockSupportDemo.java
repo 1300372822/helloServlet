@@ -62,6 +62,7 @@ public class LockSupportDemo {
         Thread b = new Thread(()->{
             System.out.println(Thread.currentThread().getName() + "\t" + "------------通知");
             LockSupport.unpark(a);
+            LockSupport.unpark(a);
         });
         b.start();
     }

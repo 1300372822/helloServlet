@@ -11,7 +11,7 @@ public class SingletonDemo3 {
         System.out.println("instance1.hashCode="+instance1.hashCode());
     }
 }
-//懒汉式
+//懒汉式  线程不安全
 class Singleton{
     private static Singleton instance;
     private Singleton(){}

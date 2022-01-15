@@ -39,7 +39,6 @@ public class DfsTree {
             return;
         }
         int leftlenth=0;
-
         /*if(in!=null){
             for(int j = 0;j<in.length;++){
                 if(in[j]==pre[0])
@@ -47,13 +46,11 @@ public class DfsTree {
             }
         }*/
         if (in!=null){
-
             leftlenth = Arrays.stream(in).boxed().collect(Collectors.toList()).indexOf(pre[0]);
 
         }
         treeNode.val = pre[0];
         System.out.println(leftlenth);
-
         if (leftlenth>=1){
             int[] newPre = Arrays.copyOfRange(pre, 1, leftlenth+1);
             int[] newIn = Arrays.copyOfRange(in, 0, leftlenth);
@@ -62,7 +59,6 @@ public class DfsTree {
             treeNode.left=node;
             createT(newPre,newIn,treeNode.left);
         }
-
         if (pre.length-leftlenth>=1){
             int[] rightPre = Arrays.copyOfRange(pre, leftlenth+1, pre.length+1);
             int[] riigehtIn = Arrays.copyOfRange(in, leftlenth+1, in.length+1);
@@ -71,13 +67,26 @@ public class DfsTree {
             createT(rightPre,riigehtIn,treeNode.right);
 
         }
-
-
-
-
-
     }
+    public static TreeNode getTree(int[] pre, int[] middle) {
+        return build(0,0,middle.length,pre,middle);
+    }
+    public static TreeNode build(int preStart,int inStart ,int endIndex,int[] pre, int[] middle){
+        if (preStart>pre.length||inStart>endIndex)
+            return null;
+        int index = 0;
+        for (int i = 0; i < pre.length; i++) {
+            if (pre[index]==middle[i]){
+                index = i;
+                break;
+            }
+        }
+        TreeNode node = new TreeNode(middle[index]);
 
+        node.left = build(preStart+index, inStart,index, pre, middle);
+        node.right = build(preStart+index-inStart+1, index+1,endIndex, pre, middle);
+        return node;
+    }
 
 }
 class TreeNode{

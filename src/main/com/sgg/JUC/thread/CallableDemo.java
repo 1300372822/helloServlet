@@ -31,7 +31,6 @@ public class CallableDemo {
         Thread thread2 = new Thread(futureTask,"VVV");
         thread.start();
         thread2.start();
-
         int result01 = 100;
         try {
             //futureTask.get() 要求获得callable线程的计算结果，如果没有计算完成就要去强求
