@@ -3,5 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../JDKSRC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../JVM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../springbootlearn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../springlearn" vcs="Git" />
   </component>
 </project>
